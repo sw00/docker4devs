@@ -1,0 +1,20 @@
+$ docker run -d -p 0.0.0.0:80:80 docker4devs
+6ad5142c3a253b728043f1881453a42f908cdb3fd9b52305d6bbc360b435a55a
+
+$ docker ps
+CONTAINER ID        IMAGE                       COMMAND                  CREATED             STATUS              PORTS                         NAMES
+6ad5142c3a25        docker4devs                 "nginx -g 'daemon off"   21 seconds ago      Up 20 seconds       0.0.0.0:80->80/tcp, 443/tcp   desperate_panini
+ec71f8c99492        snapsell/products-service   "catalina.sh run"        2 minutes ago       Up 2 minutes        0.0.0.0:7085->8080/tcp        products-service
+b894792f3879        snapsell/products-stubs     "/bin/sh -c 'java -ja"   2 minutes ago       Up 2 minutes        8080/tcp                      products-stubs
+
+$ docker exec 6ad51 sh -c "echo meh > /var/www/html/index.html"
+
+$ docker kill 6ad514
+6ad514
+
+$ docker rm 6ad514
+6ad514
+
+$ docker run -d -p 0.0.0.0:80:80 docker4devs
+4217a4a89a121b4daf73fc54951cb56cb45f101b78e50d41482bb63b647dcd44
+
