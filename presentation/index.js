@@ -70,8 +70,8 @@ preloader(images);
 
 const theme = createTheme({
   primary: "#75982c",
-  secondary: "white",
-  tertiary: "black"
+  secondary: "black",
+  tertiary: "white"
 });
 
 export default class Presentation extends React.Component {
@@ -87,11 +87,11 @@ export default class Presentation extends React.Component {
           <Heading size={5} textColor="white">Coming up...</Heading>
           <Layout>
               <List>
-                <ListItem><Appear fid="1"><Link href="/#/2">What devs really want</Link></Appear></ListItem>
-                <ListItem><Appear fid="2"><Link href="/#/6">Anatomy of a Web Service</Link></Appear></ListItem>
-                <ListItem><Appear fid="3"><Link href="/#/14">Configuration Management</Link></Appear></ListItem>
-                <ListItem><Appear fid="4"><Link hredf="/#/20">Docker Concepts</Link></Appear></ListItem>
-                <ListItem><Appear fid="5"><Link hredf="/#/20">Demo Time</Link></Appear></ListItem>
+                <ListItem>What devs really want</ListItem>
+                <ListItem>Anatomy of a Web Service</ListItem>
+                <ListItem>Configuration Management</ListItem>
+                <ListItem>Docker Concepts</ListItem>
+                <ListItem>Demo Time</ListItem>
               </List>
           </Layout>
         </Slide>
@@ -101,7 +101,7 @@ export default class Presentation extends React.Component {
         <Slide textColor="white" bgImage={images.mixer} bgDarken={0.70}
         notes="<ul><li>automated testing</li><li>sometimes debugging is necessary</li><li>mocks/stubs have limitations</li></ul>">
           <Heading size={2} textColor="primary">Fast Feedback</Heading>
-          <Appear><Text>validate our changes</Text></Appear>
+          <Appear><Heading>validate our changes</Heading></Appear>
         </Slide>
         <Slide textColor="white" bgImage={images.twins} bgDarken={0.70} notes="It works on my machine. Works in production, but not in the CI.">
           <Heading size={2} textColor="primary">Consistency</Heading>
@@ -112,7 +112,7 @@ export default class Presentation extends React.Component {
           <Appear><Heading>easier troubleshooting</Heading></Appear>
         </Slide>
         <Slide bgImage={images.anatomy} bgDarken={0.50} notes="What is a web service really? What does it look like?">
-          <Heading size={3} fit>Anatomy of a Web Service</Heading>
+          <Heading size={3} textColor="white">Anatomy of a Web Service</Heading>
         </Slide>
         <Slide bgImage={images.blackbox} bgDarken={0.20} notes="for all intents and purposes, most of the time it's a black box with an API.">
           <Heading  size={1} fit>[hostname]:[port]/[resource]</Heading>
@@ -137,7 +137,7 @@ export default class Presentation extends React.Component {
           <Image src={images.ws_multi2} margin="0px auto " width="700px"/>
         </Slide>
         <Slide bgImage={images.lego} bgDarken={0.70} notes="<ul><li>infrastructure has become a core concept in configuration management</li></ul>">
-          <Heading size={3} fit>Configuration Management</Heading>
+          <Heading size={3} textColor="white" fit>Configuration Management</Heading>
           <Appear><Heading size={2} textColor="primary">Infrastructure as Code</Heading></Appear>
         </Slide>
         <Slide>
@@ -182,7 +182,7 @@ export default class Presentation extends React.Component {
           <Heading>Docker Concepts</Heading>
         </Slide>
         <Slide>
-          <Heading size={3}>Docker Image</Heading>
+          <Heading size={3} textColor="white">Docker Image</Heading>
           <Text>A layered, read-only snapshot of directory and files.</Text>
         </Slide>
         <Slide notes="<ul><li>golden image, similar to VMs</li><li>layered because of AUFS</li><li>writable layer is the actual container</li></ul>">
@@ -213,6 +213,8 @@ export default class Presentation extends React.Component {
         <Slide>
           <Heading>Registries</Heading>
           <Text>Private or public stores to <b>distribute</b> images.</Text>
+        </Slide>
+        <Slide>
           <Image src={images.docker_hub} margin="0px auto" width="700px"/>
         </Slide>
         <Slide>

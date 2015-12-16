@@ -30,7 +30,7 @@ module.exports = {
       loader: "babel"
     }, {
       test: /\.css$/,
-      loader: "style-loader!css-loader?root=/docker4devs"
+      loader: "style-loader!css-loader"
     }, {
       test: /\.(png|jpg)$/,
       loader: "url-loader?limit=10000"
